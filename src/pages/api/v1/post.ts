@@ -115,7 +115,7 @@ async function getPosts(req: NextApiRequest, res: NextApiResponse) {
                 take: input.limit,
                 skip: input.page * (input.limit ?? 10),
                 orderBy: {
-                    createdAt: "asc",
+                    createdAt: "desc",
                 },
                 select: apiPostShape,
             }),
